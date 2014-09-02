@@ -1,20 +1,15 @@
-===========================
-Tornado MongoDB Boilerplate
-===========================
+========================
+Tornado project skeleton
+========================
 
 This is my boilerplate to build a simple, fast and rock solid website. There
-are quite many Tornado/MongoDB template projects out there, but I wanted to
+are quite many Tornado template projects out there, but I wanted to
 start something from scratch, that fits my needs and evolves out of years of
 experiences (positive and negative) with other Python based webframeworks like
 `Turbogears`__ and `Django`__.
 
 Of course this template is not designed for larger data structures. The main
-focus is on scalability, fast data access and small library dependencies. For
-this purpose, the Boilerplate uses the following applications/libraries:
-
- * `Tornado Webserver`__
- * `MongoDB`__
- * `Google Closure`__
+focus is on scalability, fast data access and small library dependencies.
  
 Installation
 ============
