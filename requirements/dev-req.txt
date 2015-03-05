@@ -1,2 +1,5 @@
 ipython
-pylint
+pytest==2.6.4
+pytest-pep8
+pytest-cov
+tox

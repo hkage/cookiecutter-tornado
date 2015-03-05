@@ -21,6 +21,15 @@ CMD_PYLINT = 'pylint'
 
 
 @task
+def vagrant():
+    env.environment = 'local'
+    env.user = 'vagrant'
+    env.hosts = ['127.0.0.1:2222']
+    result = local('vagrant ssh-config | grep IdentityFile', capture=True)
+    env.key_filename = result.split()[1]
+
+
+@task
 def clean():
     """Remove temporary files."""
     for root, dirs, files in os.walk('.'):
@@ -43,9 +52,9 @@ def mo():
 @task
 def po():
     pass
-    
- 
-@task  
+
+
+@task
 def pylint(pylint_cmd=CMD_PYLINT, pylint_options=None):
     if pylint_options is None:
         pylint_options = []
