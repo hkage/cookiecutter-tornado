@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-setup(name='tax-tentacle-client',
+setup(name='tornado-project-skeleton',
       version='0.1',
       description='Tornado project skeleton',
       long_description='',
