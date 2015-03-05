@@ -1,4 +1,5 @@
 # Python
+*.egg-info
 *.pyc
 
 # Translations

@@ -1,5 +1,0 @@
-ipython
-pytest>=2.6.0
-pytest-pep8
-pytest-cov
-tox

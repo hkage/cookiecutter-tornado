@@ -1,2 +1,0 @@
-tornado==4.1
-Fabric==1.10.1

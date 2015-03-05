@@ -14,17 +14,10 @@ focus is on scalability, fast data access and small library dependencies.
 Installation
 ============
 
-Check out the source::
+Check out the sources and install the requirements::
 
- $ git clone git://github.com/hkage/tornado-mongodb-boilerplate.git
-
-Install the required Python libraries from within the project's directory::
-
- $ pip install -r requirements/stable-req.txt
-
-And additionally also install the needed development tools::
-
- $ pip install -r requirements/dev-req.txt
+ $ git clone git@github.com:hkage/tornado-project-skeleton.git
+ $ pip install -e .
 
 Configuration
 =============
