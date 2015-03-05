@@ -22,6 +22,7 @@ CMD_PYLINT = 'pylint'
 
 @task
 def vagrant():
+    """Vagrant environment"""
     env.environment = 'local'
     env.user = 'vagrant'
     env.hosts = ['127.0.0.1:2222']
@@ -41,7 +42,7 @@ def clean():
 @task
 def devserver(port=8888, logging='error'):
     """Start the server in development mode."""
-    local('python run.py --port=%s --logging=%s' % (port, logging))
+    run('python run.py --port=%s --logging=%s' % (port, logging))
 
 
 @task
