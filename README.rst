@@ -36,6 +36,14 @@ you want to use another port, just type::
 
 In addition to that, see the fabfile.py Script for other parameters and comands.
 
+Using vagrant
+=============
+
+To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and
+start the development server with the following command::
+
+ $ fab vagrant devserver
+
 __ http://www.turbogears.com
 __ http://www.djangoproject.com
 __ http://www.tornadoweb.org
