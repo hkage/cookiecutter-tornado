@@ -12,7 +12,7 @@ setup(name='tornado-project-skeleton',
       classifiers=[],
       packages=find_packages(exclude=['tests']),
       install_requires=[
-          'tornado==4.1'
+          'tornado==4.2'
       ],
       tests_require=[
           'pytest>=2.6.0',
