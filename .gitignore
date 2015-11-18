@@ -1,6 +1,7 @@
 # Python
 *.egg-info
 *.pyc
+.cache
 
 # Translations
 *.mo
