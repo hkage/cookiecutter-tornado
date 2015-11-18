@@ -22,6 +22,12 @@ Check out the sources and install the requirements::
 Configuration
 =============
 
+Testing
+=======
+All test files will be added to the ``tests`` directory. To run the tests, simply call::
+
+ $ python setup.py test
+
 Start the server
 ================
 
