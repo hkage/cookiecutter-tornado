@@ -20,7 +20,13 @@ Installation
 Check out the sources and install the requirements:
 
     $ git clone git@github.com:hkage/tornado-project-skeleton.git
+
+To install the basic requirements for a Tornado project execute:
+
     $ python setup.py install
+
+Make your changes and implement your project.
+
 
 Configuration
 ---
