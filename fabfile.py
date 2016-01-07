@@ -53,27 +53,3 @@ def mo():
 @task
 def po():
     pass
-
-
-@task
-def pylint(pylint_cmd=CMD_PYLINT, pylint_options=None):
-    if pylint_options is None:
-        pylint_options = []
-    with settings(warn_only=True):
-        result = local(' '.join([CMD_PYLINT, '--rcfile=tools/pylint.rc']
-                                +pylint_options))
-        fatal = 1
-        error = 2
-        warning = 4
-        usage = 32
-        if result.return_code == usage:
-            abort(colors.red('Pylint usage error.', bold=True))
-        elif fatal & result.return_code or error & result.return_code:
-            abort(colors.red('Pylint error.', bold=True))
-        elif warning & result.return_code:
-            print(colors.yellow('Pylint reported warnings.'))
-
-
-@task
-def test():
-    pass
