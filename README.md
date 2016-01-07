@@ -56,6 +56,7 @@ Using vagrant
 ---
 
 To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and
-start the development server with the following command::
+start the development server with the following command:
 
+    $ vagrant up
     $ fab vagrant devserver
