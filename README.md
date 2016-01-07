@@ -9,6 +9,11 @@ of years of experiences (positive and negative alike) with other Python based we
 Of course this template is not designed for larger data structures. The main
 focus is on scalability, fast data access and small library dependencies.
 
+Features
+---
+* pytest for testing
+* Vagrant file supported
+
 Installation
 ---
 
