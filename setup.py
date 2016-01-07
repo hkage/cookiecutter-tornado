@@ -11,7 +11,7 @@ exec(open('version.py').read())
 setup(name='tornado-project-skeleton',
     version=__version__,
     description='Tornado project skeleton',
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     author='Henning Kage',
     author_email='henning.kage@gmail.com',
     url='https://github.com/hkage/tornado-project-skeleton',

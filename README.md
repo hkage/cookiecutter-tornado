@@ -1,11 +1,10 @@
 Tornado project skeleton
 ===
 
-This is my boilerplate to build a simple, fast and rock solid website. There
-are quite many Tornado template projects out there, but I wanted to
-start something from scratch, that fits my needs and evolves out of years of
-experiences (positive and negative) with other Python based webframeworks like
-Turbogears and Django.
+This is my boilerplate to build a simple, fast and rock solid website based upon
+the Tornado framework. There are quite many Tornado template projects out there,
+but I wanted to start something from scratch, that fits my needs and evolves out
+of years of experiences (positive and negative alike) with other Python based webframeworks like Turbogears and Django.
 
 Of course this template is not designed for larger data structures. The main
 focus is on scalability, fast data access and small library dependencies.
@@ -48,9 +47,3 @@ To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and
 start the development server with the following command::
 
     $ fab vagrant devserver
-
-__ http://www.turbogears.com
-__ http://www.djangoproject.com
-__ http://www.tornadoweb.org
-__ http://www.mongodb.org
-__ http://code.google.com/closure
