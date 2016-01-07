@@ -38,7 +38,8 @@ you want to use another port, just type:
 
     $ fab devserver:port=8000
 
-In addition to that, see the fabfile.py Script for other parameters and comands.
+In addition to that, see the fabfile.py Script for other parameters and
+commands.
 
 Using vagrant
 ---
