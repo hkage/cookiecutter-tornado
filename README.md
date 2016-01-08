@@ -13,6 +13,7 @@ Features
 ---
 * pytest for testing
 * Vagrant file supported
+* HTML5 Boilerplate
 
 Installation
 ---
