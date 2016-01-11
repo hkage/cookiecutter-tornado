@@ -13,7 +13,7 @@ Features
 ---
 * pytest for testing
 * Vagrant file supported
-* HTML5 Boilerplate
+* Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
 
 Installation
 ---
