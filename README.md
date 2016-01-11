@@ -12,7 +12,7 @@ focus is on scalability, fast data access and small library dependencies.
 Features
 ---
 * pytest for testing
-* Vagrant file supported
+* Vagrant and Docker supported
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
 
 Installation
