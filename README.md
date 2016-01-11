@@ -61,3 +61,15 @@ start the development server with the following command:
 
     $ vagrant up
     $ fab vagrant devserver
+
+You can now access your application via `http://localhost:8000`
+
+Docker
+---
+
+To run the application within Docker, you need to build and then run the image:
+
+    $ sudo docker build --tag=tornado-app --rm=true .
+    $ sudo docker run -p 8000:8000 -t -i tornado-app:latest
+
+You can now access your application via `http://localhost:8000`
