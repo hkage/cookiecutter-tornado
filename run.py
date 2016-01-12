@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""Basic run script"""
+
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options

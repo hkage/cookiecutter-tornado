@@ -7,14 +7,8 @@ import sys
 sys.path.insert(0, os.getcwd())
 
 from fabric import colors
-from fabric.api import *  # NOQA
+from fabric.api import *
 from fabric.contrib.console import confirm
-
-# be compatible with fabric 1.0
-try:
-    task
-except NameError:
-    task = lambda f: f
 
 
 CMD_PYLINT = 'pylint'
