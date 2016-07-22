@@ -11,23 +11,21 @@ focus is on scalability, fast data access and small library dependencies.
 
 Features
 ---
-* pytest for testing
+* Configurable as a Cookiecutter template
+* pytest and tox for testing
 * Vagrant and Docker supported
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
 
 Installation
 ---
 
-Check out the sources and install the requirements:
+Install Cookiecutter
 
-    $ git clone git@github.com:hkage/tornado-project-skeleton.git
+    $ pip install cookiecutter
 
-To install the basic requirements for a Tornado project execute:
+Initialize the project with cookiecutter and answer some questions for the newly started project:
 
-    $ python setup.py install
-
-Make your changes and implement your project.
-
+    $ cookiecutter https://github.com/hkage/tornado-project-skeleton
 
 Configuration
 ---
