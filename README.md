@@ -25,7 +25,7 @@ Install Cookiecutter
 
 Initialize the project with cookiecutter and answer some questions for the newly started project:
 
-    $ cookiecutter https://github.com/hkage/tornado-project-skeleton
+    $ cookiecutter https://github.com/hkage/cookiecutter-tornado
 
 Configuration
 ---
