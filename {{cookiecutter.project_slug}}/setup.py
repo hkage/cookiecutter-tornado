@@ -13,6 +13,9 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
+exec(open('{{ cookiecutter.project_slug }}/version.py').read())
+
+
 tests_require = [
     'coverage',
     'flake8',
@@ -28,7 +31,7 @@ tests_require = [
 version = '{{ cookiecutter.version }}'
 
 setup(name='{{ cookiecutter.project_name }}',
-      version=version,
+      version=__version__,
       description='{{ cookiecutter.description }}',
       long_description=read('README.md'),
       author='{{ cookiecutter.author_name }}',
@@ -40,5 +43,5 @@ setup(name='{{ cookiecutter.project_name }}',
           '{{ cookiecutter.project_slug }}',
           ],
       test_suite='tests',
-      setup_requires=['pytest-runner],
+      setup_requires=['pytest-runner'],
       tests_require=tests_require)
