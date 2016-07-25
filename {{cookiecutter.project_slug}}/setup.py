@@ -27,12 +27,12 @@ tests_require = [
 
 version = '{{ cookiecutter.version }}'
 
-setup(name='{{cookiecutter.project_name}}',
+setup(name='{{ cookiecutter.project_name }}',
       version=version,
-      description='{{cookiecutter.description}}',
+      description='{{ cookiecutter.description }}',
       long_description=read('README.md'),
-      author='{{cookiecutter.author_name}}',
-      author_email='{{cookiecutter.email}}',
+      author='{{ cookiecutter.author_name }}',
+      author_email='{{ cookiecutter.email }}',
       url='https://github.com/hkage/tornado-project-skeleton',
       include_package_data=True,
       classifiers=[],
