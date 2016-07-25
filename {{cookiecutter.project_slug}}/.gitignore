@@ -1,0 +1,17 @@
+# Python
+*.egg-info
+*.egg
+*.pyc
+.cache
+build
+dist
+
+# Translations
+*.mo
+
+# Testing
+.tox
+
+# Vagrant
+.vagrant
+.bash_history

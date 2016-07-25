@@ -12,7 +12,7 @@ from tornado.options import options
 import tornado.web
 
 from settings import settings
-from urls import url_patterns
+from {{ cookiecutter.project_slug }}.urls import url_patterns
 
 
 class TornadoApplication(tornado.web.Application):

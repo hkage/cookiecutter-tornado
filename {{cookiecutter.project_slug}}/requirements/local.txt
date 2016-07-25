@@ -1,0 +1,5 @@
+# Local development dependencies go here
+-r base.txt
+
+ipdb
+Sphinx

@@ -1,0 +1,6 @@
+# Test dependencies go here.
+-r base.txt
+
+pytest
+pytest-pep8
+pytest-cov
