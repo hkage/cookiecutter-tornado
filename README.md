@@ -13,8 +13,9 @@ Features
 ---
 * Configurable as a Cookiecutter template
 * pytest and tox for testing
-* Vagrant and Docker supported
+* Vagrant and Docker support
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
+* SASS for CSS generation
 
 Installation
 ---

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+"""Post generation script"""
+
 import os
 
 
