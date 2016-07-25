@@ -1,7 +1,7 @@
-Tornado project skeleton
+Tornado Cookiecutter template
 ===
 
-This is my boilerplate to build a simple, fast and rock solid website based upon
+This is my cookiecutter template to build a simple, fast and rock solid website based upon
 the Tornado framework. There are quite many Tornado template projects out there,
 but I wanted to start something from scratch, that fits my needs and evolves out
 of years of experiences (positive and negative alike) with other Python based webframeworks like Turbogears and Django.
