@@ -14,7 +14,7 @@ define("debug", default=False, help="debug mode")
 settings = {}
 
 settings["debug"] = True
-settings["cookie_secret"] = "askdfjpo83q47r9haskldfjh8"
+settings["cookie_secret"] = "!!CHANGEME!!"
 settings["login_url"] = "/login"
 settings["static_path"] = os.path.join(os.path.dirname(__file__), "static")
 settings["template_path"] = os.path.join(os.path.dirname(__file__),
