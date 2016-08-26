@@ -1,11 +1,12 @@
 Changelog
 ===
 
-0.2.0 (2016-07-xx)
+Development
 ---
 * #2: Changed the boilerplate to a Cookiecutter template
 * Added tox file for testing
 * Added .editorconfig
+* Added Sphinx documentation
 
 0.1.1 (2016-01-11)
 ---
