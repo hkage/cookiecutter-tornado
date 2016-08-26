@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+"""Global settings for the project"""
+
 import os.path
 
 from tornado.options import define
@@ -15,5 +17,6 @@ settings["debug"] = True
 settings["cookie_secret"] = "askdfjpo83q47r9haskldfjh8"
 settings["login_url"] = "/login"
 settings["static_path"] = os.path.join(os.path.dirname(__file__), "static")
-settings["template_path"] = os.path.join(os.path.dirname(__file__), "templates")
+settings["template_path"] = os.path.join(os.path.dirname(__file__),
+                                         "templates")
 settings["xsrf_cookies"] = False

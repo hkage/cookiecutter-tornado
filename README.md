@@ -1,7 +1,7 @@
-Tornado project skeleton
+Tornado Cookiecutter template
 ===
 
-This is my boilerplate to build a simple, fast and rock solid website based upon
+This is my cookiecutter template to build a simple, fast and rock solid website based upon
 the Tornado framework. There are quite many Tornado template projects out there,
 but I wanted to start something from scratch, that fits my needs and evolves out
 of years of experiences (positive and negative alike) with other Python based webframeworks like Turbogears and Django.
@@ -11,23 +11,22 @@ focus is on scalability, fast data access and small library dependencies.
 
 Features
 ---
-* pytest for testing
-* Vagrant and Docker supported
+* Configurable as a Cookiecutter template
+* pytest and tox for testing
+* Vagrant and Docker support
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
+* SASS for CSS generation
 
 Installation
 ---
 
-Check out the sources and install the requirements:
+Install Cookiecutter
 
-    $ git clone git@github.com:hkage/tornado-project-skeleton.git
+    $ pip install cookiecutter
 
-To install the basic requirements for a Tornado project execute:
+Initialize the project with cookiecutter and answer some questions for the newly started project:
 
-    $ python setup.py install
-
-Make your changes and implement your project.
-
+    $ cookiecutter https://github.com/hkage/cookiecutter-tornado
 
 Configuration
 ---

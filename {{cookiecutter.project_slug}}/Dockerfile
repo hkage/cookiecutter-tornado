@@ -1,6 +1,6 @@
 FROM debian:stable
 
-MAINTAINER Henning Kage "henning.kage@gmail.com"
+MAINTAINER {{ cookiecutter.author_name }} "{{ cookiecutter.email }}"
 
 USER root
 
