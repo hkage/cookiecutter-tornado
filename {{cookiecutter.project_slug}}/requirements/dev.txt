@@ -1,0 +1,12 @@
+# Local development dependencies go here
+-r base.txt
+
+coverage
+flake8
+mock
+pydocstyle
+pylint
+pytest
+pytest-pep8
+pytest-cov
+Sphinx
