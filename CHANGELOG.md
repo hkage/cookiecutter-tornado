@@ -7,6 +7,7 @@ Development
 * Added tox file for testing
 * Added .editorconfig
 * Added Sphinx documentation
+* Added bumpversion support
 
 0.1.1 (2016-01-11)
 ---
