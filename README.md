@@ -1,6 +1,8 @@
 Tornado Cookiecutter template
 ===
 
+[![Build Status](https://travis-ci.org/hkage/cookiecutter-tornado.svg?branch=development)](https://travis-ci.org/hkage/cookiecutter-tornado)
+
 This is my cookiecutter template to build a simple, fast and rock solid website based upon
 the Tornado framework. There are quite many Tornado template projects out there,
 but I wanted to start something from scratch, that fits my needs and evolves out
