@@ -24,6 +24,10 @@ def generate_random_string(length=25,
     return ''.join(random.choice(allowed_chars) for i in range(length))
 
 
+def remove_file(filepath):
+    os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
+
+
 def set_cookie_secret(project_directory):
     project_settings_file = os.path.join(project_directory, 'settings.py')
     with open(project_settings_file) as f:
@@ -33,11 +37,12 @@ def set_cookie_secret(project_directory):
         f.write(file_)
 
 
-if '{{ cookiecutter.use_docker }}'.lower() == 'n':
-    os.remove(os.path.join(PROJECT_DIRECTORY, 'Dockerfile'))
+if __name__ == '__main__':
+    if '{{ cookiecutter.use_docker }}'.lower() in ('n', 'no'):
+        remove_file('Dockerfile')
 
-if '{{ cookiecutter.use_vagrant }}'.lower() == 'n':
-    os.remove(os.path.join(PROJECT_DIRECTORY, 'Vagrantfile'))
+    if '{{ cookiecutter.use_vagrant }}'.lower() in ('n', 'no'):
+        remove_file('Vagrantfile')
 
-# Replace the cookie secret
-set_cookie_secret(PROJECT_DIRECTORY)
+    # Replace the cookie secret
+    set_cookie_secret(PROJECT_DIRECTORY)

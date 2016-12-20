@@ -3,6 +3,7 @@
 from contextlib import contextmanager
 
 from cookiecutter.utils import rmtree
+import pytest
 
 
 @contextmanager
@@ -23,6 +24,35 @@ def test_bake_project_with_defaults(cookies):
         assert 'setup.py' in found_toplevel_files
         assert 'tox.ini' in found_toplevel_files
         assert 'Dockerfile' in found_toplevel_files
+        assert 'tests' in found_toplevel_files
+
+
+@pytest.mark.parametrize('with_docker_support, expected_result', [
+    ('y', True),
+    ('yes', True),
+    ('YES', True),
+    ('n', False),
+    ('no', False),
+    ('NO', False),
+    ])
+def test_docker_support(cookies, with_docker_support, expected_result):
+    with bake_in_temp_dir(cookies, extra_context={'use_docker': with_docker_support}) as result:
+        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        assert ('Dockerfile' in found_toplevel_files) == expected_result
+
+
+@pytest.mark.parametrize('with_vagrant_support, expected_result', [
+    ('y', True),
+    ('yes', True),
+    ('YES', True),
+    ('n', False),
+    ('no', False),
+    ('NO', False),
+    ])
+def test_vagrant_support(cookies, with_vagrant_support, expected_result):
+    with bake_in_temp_dir(cookies, extra_context={'use_vagrant': with_vagrant_support}) as result:
+        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        assert ('Vagrantfile' in found_toplevel_files) == expected_result
 
 
 def test_cookie_secret_has_been_generated(cookies):
