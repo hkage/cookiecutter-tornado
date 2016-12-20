@@ -44,5 +44,8 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_vagrant }}'.lower() in ('n', 'no'):
         remove_file('Vagrantfile')
 
+    if '{{ cookiecutter.use_bumpversion }}'.lower() in ('n', 'no'):
+        remove_file('.bumpversion.cfg')
+
     # Replace the cookie secret
     set_cookie_secret(PROJECT_DIRECTORY)

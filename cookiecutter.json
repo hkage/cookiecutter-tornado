@@ -7,5 +7,6 @@
   "version": "0.1.0",
   "use_docker": "y",
   "use_vagrant": "y",
+  "use_bumpversion": "y",
   "open_source_license": ["MIT", "BSD", "GPLv3", "Apache Software License 2.0", "Not open source"]
 }
