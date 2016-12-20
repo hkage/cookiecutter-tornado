@@ -30,4 +30,3 @@ def test_cookie_secret_has_been_generated(cookies):
         settings_file = result.project.join('settings.py')
         settings_lines = settings_file.readlines(cr=False)
         assert '!!CHANGEME!!' not in settings_lines
-        print settings_lines
