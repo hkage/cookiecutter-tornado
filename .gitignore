@@ -14,3 +14,5 @@ dist
 .bash_history
 
 .idea
+
+.tox
