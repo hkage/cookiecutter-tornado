@@ -3,6 +3,8 @@
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
   "author_name": "Your name",
   "email": "Your e-mail",
+  "github_username": "yourname",
+  "repo_name": "tornado-project",
   "description": "A short description of the project.",
   "version": "0.1.0",
   "use_docker": "y",
