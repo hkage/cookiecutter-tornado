@@ -12,7 +12,8 @@ PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
 def generate_random_string(length=25,
                            allowed_chars=string.ascii_letters + string.digits):
-    """Generate a random string.
+    """
+    Generate a random string.
 
     :param length: The length of the desired string
     :type length: int
@@ -25,10 +26,20 @@ def generate_random_string(length=25,
 
 
 def remove_file(filepath):
+    """
+    Remove a file with the given path.
+
+    :param str filepath: Path of the file.
+    """
     os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
 
 
 def set_cookie_secret(project_directory):
+    """
+    Open the settings and generate a secure cookie secret.
+
+    :param str project_directory: Path of the project directory.
+    """
     project_settings_file = os.path.join(project_directory, 'settings.py')
     with open(project_settings_file) as f:
         file_ = f.read()
