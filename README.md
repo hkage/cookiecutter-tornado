@@ -18,7 +18,8 @@ Features
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
 * SASS for CSS generation
 * (Optional) [Bumpversion](https://github.com/peritus/bumpversion) for updating version information
-* (Optional) Vagrant and Docker support
+* (Optional) Docker support
+* (Optional) Vagrant support
 
 Installation
 ---
