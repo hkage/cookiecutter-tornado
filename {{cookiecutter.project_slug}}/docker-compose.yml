@@ -1,6 +1,6 @@
 version: '2'
 services:
-  tornado-app:
+  {{ cookiecutter.project_slug }}:
     build: .
     command: python /app/run.py
     ports:
