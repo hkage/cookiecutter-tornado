@@ -16,7 +16,6 @@ Features
 * Configurable as a Cookiecutter template
 * pytest and tox for testing
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
-* SASS for CSS generation
 * (Optional) [Bumpversion](https://github.com/peritus/bumpversion) for updating version information
 * (Optional) Docker support
 * (Optional) Vagrant support
