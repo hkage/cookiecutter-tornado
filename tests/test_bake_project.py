@@ -69,6 +69,34 @@ def test_bumpversion_support(cookies, with_bumpversion_support, expected_result)
         assert ('.bumpversion.cfg' in found_toplevel_files) == expected_result
 
 
+@pytest.mark.parametrize('with_pytest_support, expected_result', [
+    ('y', True),
+    ('yes', True),
+    ('YES', True),
+    ('n', False),
+    ('no', False),
+    ('NO', False),
+    ])
+def test_pytest_support(cookies, with_pytest_support, expected_result):
+    with bake_in_temp_dir(cookies, extra_context={'use_pytest': with_pytest_support}) as result:
+        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        assert ('pytest.ini' in found_toplevel_files) == expected_result
+
+
+@pytest.mark.parametrize('with_tox_support, expected_result', [
+    ('y', True),
+    ('yes', True),
+    ('YES', True),
+    ('n', False),
+    ('no', False),
+    ('NO', False),
+    ])
+def test_tox_support(cookies, with_tox_support, expected_result):
+    with bake_in_temp_dir(cookies, extra_context={'use_tox': with_tox_support}) as result:
+        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        assert ('tox.ini' in found_toplevel_files) == expected_result
+
+
 def test_cookie_secret_has_been_generated(cookies):
     with bake_in_temp_dir(cookies) as result:
         settings_file = result.project.join('settings.py')
