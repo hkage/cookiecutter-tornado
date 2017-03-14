@@ -6,9 +6,7 @@ import os
 import sys
 sys.path.insert(0, os.getcwd())
 
-from fabric import colors
-from fabric.api import *
-from fabric.contrib.console import confirm
+from fabric.api import *  # noqa
 
 
 CMD_PYLINT = 'pylint'
@@ -37,13 +35,3 @@ def clean():
 def devserver(port=8888, logging='error'):
     """Start the server in development mode."""
     run('python run.py --port=%s --logging=%s' % (port, logging))
-
-
-@task
-def mo():
-    pass
-
-
-@task
-def po():
-    pass

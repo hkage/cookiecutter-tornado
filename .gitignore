@@ -12,3 +12,7 @@ dist
 # Vagrant
 .vagrant
 .bash_history
+
+.idea
+
+.tox

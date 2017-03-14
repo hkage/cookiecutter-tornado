@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # -*- coding: utf-8 -*-
 
 import os.path
@@ -33,10 +34,10 @@ version = '{{ cookiecutter.version }}'
 setup(name='{{ cookiecutter.project_name }}',
       version=__version__,
       description='{{ cookiecutter.description }}',
-      long_description=read('README.md'),
+      long_description=read('README.rst'),
       author='{{ cookiecutter.author_name }}',
       author_email='{{ cookiecutter.email }}',
-      url='https://github.com/hkage/tornado-project-skeleton',
+      url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
       include_package_data=True,
       classifiers=[],
       packages=[

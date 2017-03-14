@@ -1,25 +1,20 @@
-FROM debian:stable
+FROM phusion/baseimage:0.9.19
 
 MAINTAINER {{ cookiecutter.author_name }} "{{ cookiecutter.email }}"
 
 USER root
 
-# Link the project directory
-ADD . /app
-
-# Set environment variables
 ENV PYTHON_VERSION 2.7
 
-# Install basic requirements
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y --no-install-recommends build-essential openssh-client git git-core python-pip procps net-tools wget unzip python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python-distribute
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends build-essential openssh-client git git-core python-pip procps net-tools wget unzip python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python-distribute \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install the requirements and run the application
-RUN (cd /app && python setup.py install)
-#CMD (cd /app && python run.py --port=8000 --logging=debug)
+WORKDIR /app
+ADD . /app/
 
+RUN pip install wheel \
+    && pip install -r requirements.txt
 RUN chown -R www-data: /app
-
-CMD ["python", "/app/run.py"]
-
-EXPOSE 8000

@@ -1,0 +1,7 @@
+version: '2'
+services:
+  {{ cookiecutter.project_slug }}:
+    build: .
+    command: python /app/run.py
+    ports:
+      - "8000:8000"

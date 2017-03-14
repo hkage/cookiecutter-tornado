@@ -3,9 +3,14 @@
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
   "author_name": "Your name",
   "email": "Your e-mail",
+  "github_username": "yourname",
+  "repo_name": "tornado-project",
   "description": "A short description of the project.",
   "version": "0.1.0",
+  "use_pytest": "y",
+  "use_tox": "y",
   "use_docker": "y",
   "use_vagrant": "y",
+  "use_bumpversion": "y",
   "open_source_license": ["MIT", "BSD", "GPLv3", "Apache Software License 2.0", "Not open source"]
 }
