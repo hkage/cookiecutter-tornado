@@ -4,7 +4,7 @@ Changelog
 Development
 ---
 
-0.2.0
+0.2.0 (2017-03-14)
 ---
 * #2: Changed the boilerplate to a Cookiecutter template
 * Added tox file for testing
