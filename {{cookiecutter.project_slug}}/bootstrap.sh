@@ -11,4 +11,4 @@ python-dev
 
 apt-get -y install $APT_PACKAGES
 
-python setup.py install
+pip install -r requirements.txt
