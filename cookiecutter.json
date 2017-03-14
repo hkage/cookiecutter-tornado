@@ -7,6 +7,8 @@
   "repo_name": "tornado-project",
   "description": "A short description of the project.",
   "version": "0.1.0",
+  "use_pytest": "y",
+  "use_tox": "y",
   "use_docker": "y",
   "use_vagrant": "y",
   "use_bumpversion": "y",

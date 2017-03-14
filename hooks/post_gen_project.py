@@ -58,5 +58,11 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_bumpversion }}'.lower() in ('n', 'no'):
         remove_file('.bumpversion.cfg')
 
+    if '{{ cookiecutter.use_tox }}'.lower() in ('n', 'no'):
+        remove_file('tox.ini')
+
+    if '{{ cookiecutter.use_pytest }}'.lower() in ('n', 'no'):
+        remove_file('pytest.ini')
+
     # Replace the cookie secret
     set_cookie_secret(PROJECT_DIRECTORY)

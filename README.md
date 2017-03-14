@@ -15,8 +15,9 @@ focus is on scalability, fast data access and small library dependencies.
 Features
 ---
 * Configurable as a Cookiecutter template
-* Uses pytest and tox for testing
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
+* (Optional) pytest
+* (Optional) tox
 * (Optional) [Bumpversion](https://github.com/peritus/bumpversion) for updating version information
 * (Optional) Docker support
 * (Optional) Vagrant support
