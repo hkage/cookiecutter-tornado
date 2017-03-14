@@ -10,4 +10,6 @@ pytest
 pytest-pep8
 pytest-cov
 Sphinx
+{% if cookiecutter.use_bumpversion == 'y' -%}
 bumpversion
+{%- endif %}
