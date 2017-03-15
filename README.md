@@ -1,5 +1,4 @@
-Tornado Cookiecutter template
-===
+# Tornado Cookiecutter template
 
 [![Build Status](https://travis-ci.org/hkage/cookiecutter-tornado.svg?branch=development)](https://travis-ci.org/hkage/cookiecutter-tornado)
 
@@ -12,9 +11,9 @@ like Turbogears and Django.
 Of course this template is not designed for larger data structures. The main
 focus is on scalability, fast data access and small library dependencies.
 
-Features
----
-* Configurable as a [Cookiecutter]((https://github.com/audreyr/cookiecutter) template
+## Features
+
+* Configurable as a [Cookiecutter](https://github.com/audreyr/cookiecutter) template
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
 * (Optional) pytest
 * (Optional) tox
@@ -22,8 +21,7 @@ Features
 * (Optional) Docker support
 * (Optional) Vagrant support
 
-Installation
----
+## Usage
 
 Install [Cookiecutter](https://github.com/audreyr/cookiecutter):
 
@@ -55,18 +53,19 @@ Initialize the project with cookiecutter and answer some questions for the newly
     6 - Not open source
     Choose from 1, 2, 3, 4, 5, 6 [1]: 1
 
-Configuration
----
-...
+## Development
 
-Testing
----
-All test files will be added to the ``tests`` directory. To run the tests, simply call:
+### Testing
 
-    $ python setup.py test
+All tests will be added to the `tests` directory, whether you are using pytest for testing or other tools like nose- or unittests.
 
-Start the server
----
+#### pytest
+
+With pytest you will be able to run the tests with:
+
+    $ py.test
+
+### Running the application
 
 To start the final application, just run the following fabric command:
 
@@ -80,8 +79,7 @@ you want to use another port, just type:
 In addition to that, see the fabfile.py Script for other parameters and
 commands.
 
-Using vagrant
----
+#### Vagrant
 
 To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and
 start the development server with the following command:
@@ -91,8 +89,7 @@ start the development server with the following command:
 
 You can now access your application via `http://localhost:8000`
 
-Docker
----
+#### Docker
 
 Install docker and docker compose in the latest version. Then start the tornado
 project with docker-compose:
