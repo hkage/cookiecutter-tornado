@@ -3,6 +3,9 @@ Changelog
 
 Development
 ---
+* Made pytest optional within the template's setup.py
+* Added classifiers to the setup.py
+* Made the license dynamic within the setup.py's classifiers
 
 0.2.0 (2017-03-14)
 ---
