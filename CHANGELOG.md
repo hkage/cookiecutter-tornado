@@ -3,6 +3,9 @@ Changelog
 
 Development
 ---
+
+0.2.2 (2017-05-12)
+---
 * Bumped Tornado version to 4.5.1
 * Made copyright for the Sphix documentation variable
 * Remove all Docker related files
