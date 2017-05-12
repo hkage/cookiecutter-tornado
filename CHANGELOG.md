@@ -3,6 +3,8 @@ Changelog
 
 Development
 ---
+* Bumped Tornado version to 4.5.1
+* Made copyright for the Sphix documentation variable
 
 0.2.1 (2017-03-15)
 ---
