@@ -2,8 +2,18 @@
 
 from contextlib import contextmanager
 
-from cookiecutter.utils import rmtree
 import pytest
+from cookiecutter.utils import rmtree
+
+
+YES_NO_CHOICES = [
+    ('y', True),
+    ('yes', True),
+    ('YES', True),
+    ('n', False),
+    ('no', False),
+    ('NO', False),
+]
 
 
 @contextmanager
@@ -27,70 +37,35 @@ def test_bake_project_with_defaults(cookies):
         assert 'tests' in found_toplevel_files
 
 
-@pytest.mark.parametrize('with_docker_support, expected_result', [
-    ('y', True),
-    ('yes', True),
-    ('YES', True),
-    ('n', False),
-    ('no', False),
-    ('NO', False),
-    ])
+@pytest.mark.parametrize('with_docker_support, expected_result', YES_NO_CHOICES)
 def test_docker_support(cookies, with_docker_support, expected_result):
     with bake_in_temp_dir(cookies, extra_context={'use_docker': with_docker_support}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert ('Dockerfile' in found_toplevel_files) == expected_result
 
 
-@pytest.mark.parametrize('with_vagrant_support, expected_result', [
-    ('y', True),
-    ('yes', True),
-    ('YES', True),
-    ('n', False),
-    ('no', False),
-    ('NO', False),
-    ])
+@pytest.mark.parametrize('with_vagrant_support, expected_result', YES_NO_CHOICES)
 def test_vagrant_support(cookies, with_vagrant_support, expected_result):
     with bake_in_temp_dir(cookies, extra_context={'use_vagrant': with_vagrant_support}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert ('Vagrantfile' in found_toplevel_files) == expected_result
 
 
-@pytest.mark.parametrize('with_bumpversion_support, expected_result', [
-    ('y', True),
-    ('yes', True),
-    ('YES', True),
-    ('n', False),
-    ('no', False),
-    ('NO', False),
-    ])
+@pytest.mark.parametrize('with_bumpversion_support, expected_result', YES_NO_CHOICES)
 def test_bumpversion_support(cookies, with_bumpversion_support, expected_result):
     with bake_in_temp_dir(cookies, extra_context={'use_bumpversion': with_bumpversion_support}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert ('.bumpversion.cfg' in found_toplevel_files) == expected_result
 
 
-@pytest.mark.parametrize('with_pytest_support, expected_result', [
-    ('y', True),
-    ('yes', True),
-    ('YES', True),
-    ('n', False),
-    ('no', False),
-    ('NO', False),
-    ])
+@pytest.mark.parametrize('with_pytest_support, expected_result', YES_NO_CHOICES)
 def test_pytest_support(cookies, with_pytest_support, expected_result):
     with bake_in_temp_dir(cookies, extra_context={'use_pytest': with_pytest_support}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert ('pytest.ini' in found_toplevel_files) == expected_result
 
 
-@pytest.mark.parametrize('with_tox_support, expected_result', [
-    ('y', True),
-    ('yes', True),
-    ('YES', True),
-    ('n', False),
-    ('no', False),
-    ('NO', False),
-    ])
+@pytest.mark.parametrize('with_tox_support, expected_result', YES_NO_CHOICES)
 def test_tox_support(cookies, with_tox_support, expected_result):
     with bake_in_temp_dir(cookies, extra_context={'use_tox': with_tox_support}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
