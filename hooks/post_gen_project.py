@@ -3,11 +3,13 @@
 """Post generation script"""
 
 import os
-import string
 import random
+import string
 
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+DOCKER_FILES = ('Dockerfile', '.dockerignore', 'docker-compose.yml')
+VAGRANT_FILES = ('Vagrantfile', 'bootstrap.sh')
 
 
 def generate_random_string(length=25,
@@ -50,10 +52,12 @@ def set_cookie_secret(project_directory):
 
 if __name__ == '__main__':
     if '{{ cookiecutter.use_docker }}'.lower() in ('n', 'no'):
-        remove_file('Dockerfile')
+        for filename in DOCKER_FILES:
+            remove_file(filename)
 
     if '{{ cookiecutter.use_vagrant }}'.lower() in ('n', 'no'):
-        remove_file('Vagrantfile')
+        for filename in VAGRANT_FILES:
+            remove_file(filename)
 
     if '{{ cookiecutter.use_bumpversion }}'.lower() in ('n', 'no'):
         remove_file('.bumpversion.cfg')

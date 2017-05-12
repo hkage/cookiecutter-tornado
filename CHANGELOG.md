@@ -3,6 +3,12 @@ Changelog
 
 Development
 ---
+* Bumped Tornado version to 4.5.1
+* Made copyright for the Sphix documentation variable
+* Remove all Docker related files
+* Refactored some tests
+* Make bumpversion optional within the setup.cfg
+* Remove bootstrap.sh if Vagrant support has been disabled
 
 0.2.1 (2017-03-15)
 ---
