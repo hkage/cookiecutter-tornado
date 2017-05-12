@@ -9,6 +9,7 @@ import string
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 DOCKER_FILES = ('Dockerfile', '.dockerignore', 'docker-compose.yml')
+VAGRANT_FILES = ('Vagrantfile', 'bootstrap.sh')
 
 
 def generate_random_string(length=25,
@@ -55,7 +56,8 @@ if __name__ == '__main__':
             remove_file(filename)
 
     if '{{ cookiecutter.use_vagrant }}'.lower() in ('n', 'no'):
-        remove_file('Vagrantfile')
+        for filename in VAGRANT_FILES:
+            remove_file(filename)
 
     if '{{ cookiecutter.use_bumpversion }}'.lower() in ('n', 'no'):
         remove_file('.bumpversion.cfg')
