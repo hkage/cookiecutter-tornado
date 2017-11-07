@@ -4,6 +4,8 @@ Changelog
 Development
 ---
 
+* Bumped Tornado version to 4.5.2
+
 0.2.2 (2017-05-12)
 ---
 * Bumped Tornado version to 4.5.1
