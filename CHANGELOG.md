@@ -4,8 +4,12 @@ Changelog
 Development
 ---
 
-0.2.3 (2017-11-07)
+0.2.4 (2018-03-18)
+---
+* Fixed project description for GPL projects (thanks to bwrsandman)
 
+0.2.3 (2017-11-07)
+---
 * Bumped Tornado version to 4.5.2
 
 0.2.2 (2017-05-12)
