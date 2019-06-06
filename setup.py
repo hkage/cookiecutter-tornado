@@ -5,7 +5,7 @@ from distutils.core import setup
 setup(
     name='cookiecutter-tornado',
     packages=[],
-    version='0.1.1',
+    version='0.2.5',
     description='Cookiecutter template for Tornado based projects',
     author='Henning Kage',
     author_email='henning.kage@gmail.com',

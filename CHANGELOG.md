@@ -4,6 +4,10 @@ Changelog
 Development
 ---
 
+0.2.5 (2019-06-06)
+---
+* Remove duplicated classifiers entry in setup parameters (thanks to stephendwolff)
+
 0.2.4 (2018-03-18)
 ---
 * Fixed project description for GPL projects (thanks to bwrsandman)
