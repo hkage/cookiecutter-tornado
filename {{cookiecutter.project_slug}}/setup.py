@@ -66,7 +66,6 @@ setup(name='{{ cookiecutter.project_name }}',
       classifiers=[c.strip() for c in classifiers.splitlines()
                    if c.strip() and not c.startswith('#')],
       include_package_data=True,
-      classifiers=[],
       packages=[
           '{{ cookiecutter.project_slug }}',
           ],
