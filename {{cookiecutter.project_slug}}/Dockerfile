@@ -1,10 +1,10 @@
-FROM phusion/baseimage:0.9.19
+FROM phusion/baseimage:0.11
 
 MAINTAINER {{ cookiecutter.author_name }} "{{ cookiecutter.email }}"
 
 USER root
 
-ENV PYTHON_VERSION 2.7
+ENV PYTHON_VERSION 3.7
 
 RUN apt-get update \
     && apt-get upgrade -y \
