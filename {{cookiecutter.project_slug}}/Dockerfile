@@ -13,4 +13,3 @@ ADD . /app/
 
 RUN pip install wheel \
     && pip install -r requirements.txt
-RUN chown -R www-data: /app
