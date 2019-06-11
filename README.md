@@ -81,8 +81,12 @@ commands.
 
 #### Vagrant
 
-To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and
-start the development server with the following command:
+To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and the
+Vagrant Alpine plugin:
+
+    $ vagrant plugin install vagrant-alpine
+
+After that you can start the development server with the following command:
 
     $ vagrant up
     $ fab vagrant devserver
