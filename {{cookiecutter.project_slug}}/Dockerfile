@@ -1,16 +1,12 @@
-FROM phusion/baseimage:0.11
+FROM python:3.7-alpine
 
 MAINTAINER {{ cookiecutter.author_name }} "{{ cookiecutter.email }}"
 
 USER root
 
-ENV PYTHON_VERSION 3.7
-
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends build-essential openssh-client git git-core python-pip procps net-tools wget unzip python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python-distribute \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk --update add --no-cache git \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/cache/apk/*
 
 WORKDIR /app
 ADD . /app/
