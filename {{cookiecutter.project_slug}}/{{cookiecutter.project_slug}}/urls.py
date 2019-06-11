@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from handlers import base
+from .handlers import base
 
 
 url_patterns = [
