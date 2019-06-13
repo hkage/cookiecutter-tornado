@@ -53,7 +53,34 @@ Initialize the project with cookiecutter and answer some questions for the newly
     6 - Not open source
     Choose from 1, 2, 3, 4, 5, 6 [1]: 1
 
-## Development
+## Template development
+
+If you decide to contribute to this cookiecutter template, feel free to fork it and make a pull request. To start with
+the development of this template, you need to install some Python requirements:
+
+    [sudo] pip install pipenv
+
+After that simply let pipenv install all requirements:
+
+    $ pipenv install
+
+To activate the virtual environment, simply call:
+
+    $ pipenv shell
+
+Now you are able to run the tests for this template:
+
+    $ py.test
+
+In addition to that you can install tox to test the template against different Python versions:
+
+    $ [sudo] pip install tox
+
+And then run the tests with:
+
+    $ tox
+
+## Tornado project development
 
 ### Testing
 
