@@ -1,6 +1,6 @@
 FROM python:3.7-alpine
 
-MAINTAINER {{ cookiecutter.author_name }} "{{ cookiecutter.email }}"
+LABEL maintainer="{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"
 
 USER root
 

@@ -4,5 +4,5 @@ from .handlers import base
 
 
 url_patterns = [
-    (r"/", base.MainHandler),
+    (r'/', base.MainHandler),
 ]

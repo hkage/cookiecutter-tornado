@@ -2,13 +2,7 @@
 
 set -e
 
-apt-get update
+apk --update add --no-cache python3
 
-APT_PACKAGES="
-python-pip
-python-dev
-"
-
-apt-get -y install $APT_PACKAGES
-
-pip install -r requirements.txt
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
