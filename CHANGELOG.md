@@ -6,7 +6,7 @@ Development
 
 0.3.0 (2019-xx-xx)
 ---
-* Bumped Tornado version to 6.0.2
+* Bumped Tornado version to 6.0.3
 * Dropped Python 2.7 support
 
 0.2.5 (2019-06-06)
