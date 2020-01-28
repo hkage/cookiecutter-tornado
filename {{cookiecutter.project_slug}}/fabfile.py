@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import with_statement
 import os
 import sys
 sys.path.insert(0, os.getcwd())
