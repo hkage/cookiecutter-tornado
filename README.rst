@@ -10,7 +10,7 @@ Tornado Cookiecutter template
 .. section-numbering::
 
 This is my cookiecutter template to build a simple, fast and rock solid website based upon
-the [Tornado](http://www.tornadoweb.org/) framework. There are quite many Tornado templates  out there,
+the Tornado_ framework. There are quite many Tornado templates  out there,
 but I wanted to start something from scratch, that fits my needs and evolves out
 of years of experiences (positive and negative alike) with other Python based webframeworks
 like Turbogears and Django.
@@ -21,18 +21,18 @@ focus is on scalability, fast data access and small library dependencies.
 Features
 --------
 
-* Configurable as a [Cookiecutter](https://github.com/audreyr/cookiecutter) template
-* Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
+* Configurable as a Cookiecutter_ template
+* Basic HTML5 Boilerplate_
 * (Optional) pytest
 * (Optional) tox
-* (Optional) [Bumpversion](https://github.com/peritus/bumpversion) for updating version information
+* (Optional) Bumpversion_ for updating version information
 * (Optional) Docker support
 * (Optional) Vagrant support
 
 Usage
 -----
 
-Install [Cookiecutter](https://github.com/audreyr/cookiecutter)::
+Install Cookiecutter_ ::
 
     $ pip install cookiecutter
 
@@ -141,6 +141,11 @@ project with docker-compose::
     $ docker-compose up
 
 You can now access your application via `http://localhost:8000`
+
+.. _Tornado: http://www.tornadoweb.org/
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _Boilerplate: https://html5boilerplate.com/
+.. _Bumpversion: https://github.com/peritus/bumpversion
 
 .. |license| image:: https://img.shields.io/badge/license-MIT-green.svg
     :target: https://github.com/hkage/cookiecutter-tornado/blob/development/LICENSE.rst
