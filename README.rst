@@ -66,27 +66,27 @@ Template development
 -----------------------
 
 If you decide to contribute to this cookiecutter template, feel free to fork it and make a pull request. To start with
-the development of this template, you need to install some Python requirements:
+the development of this template, you need to install some Python requirements::
 
-    [sudo] pip install pipenv
+    [sudo] pip install poetry
 
-After that simply let pipenv install all requirements:
+After that simply let pipenv install all requirements::
 
-    $ pipenv install
+    $ poetry install
 
-To activate the virtual environment, simply call:
+To activate the virtual environment, simply call::
 
-    $ pipenv shell
+    $ poetry shell
 
-Now you are able to run the tests for this template:
+Now you are able to run the tests for this template::
 
     $ py.test
 
-In addition to that you can install tox to test the template against different Python versions:
+In addition to that you can install tox to test the template against different Python versions::
 
     $ [sudo] pip install tox
 
-And then run the tests with:
+And then run the tests with::
 
     $ tox
 
@@ -100,19 +100,19 @@ All tests will be added to the `tests` directory, whether you are using pytest f
 
 #### pytest
 
-With pytest you will be able to run the tests with:
+With pytest you will be able to run the tests with::
 
     $ py.test
 
 Running the application
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To start the final application, just run the following fabric command:
+To start the final application, just run the following fabric command::
 
     $ fab devserver
 
 This will tell Tornado to start the application with the default port 8888. If
-you want to use another port, just type:
+you want to use another port, just type::
 
     $ fab devserver:port=8000
 
@@ -122,11 +122,11 @@ commands.
 #### Vagrant
 
 To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and the
-Vagrant Alpine plugin:
+Vagrant Alpine plugin::
 
     $ vagrant plugin install vagrant-alpine
 
-After that you can start the development server with the following command:
+After that you can start the development server with the following command::
 
     $ vagrant up
     $ fab vagrant devserver
@@ -136,7 +136,7 @@ You can now access your application via `http://localhost:8000`
 #### Docker
 
 Install docker and docker compose in the latest version. Then start the tornado
-project with docker-compose:
+project with docker-compose::
 
     $ docker-compose up
 
