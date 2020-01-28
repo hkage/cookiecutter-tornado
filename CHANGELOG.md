@@ -4,6 +4,12 @@ Changelog
 Development
 ---
 
+0.3.0 (2019-xx-xx)
+---
+* Bumped Tornado version to 6.0.3
+* Dropped Python 2.7 support
+* Use poetry for requirement management
+
 0.2.5 (2019-06-06)
 ---
 * Remove duplicated classifiers entry in setup parameters (thanks to stephendwolff)

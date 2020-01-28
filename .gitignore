@@ -14,5 +14,6 @@ dist
 .bash_history
 
 .idea
+.vscode
 
 .tox

@@ -1,6 +1,13 @@
-# Tornado Cookiecutter template
+Tornado Cookiecutter template
+=============================
 
-[![Build Status](https://travis-ci.org/hkage/cookiecutter-tornado.svg?branch=development)](https://travis-ci.org/hkage/cookiecutter-tornado)
+.. class:: no-web no-pdf
+
+    |license| |build|
+
+.. contents::
+
+.. section-numbering::
 
 This is my cookiecutter template to build a simple, fast and rock solid website based upon
 the [Tornado](http://www.tornadoweb.org/) framework. There are quite many Tornado templates  out there,
@@ -11,7 +18,8 @@ like Turbogears and Django.
 Of course this template is not designed for larger data structures. The main
 focus is on scalability, fast data access and small library dependencies.
 
-## Features
+Features
+--------
 
 * Configurable as a [Cookiecutter](https://github.com/audreyr/cookiecutter) template
 * Basic [HTML5 Boilerplate](https://html5boilerplate.com/)
@@ -21,13 +29,14 @@ focus is on scalability, fast data access and small library dependencies.
 * (Optional) Docker support
 * (Optional) Vagrant support
 
-## Usage
+Usage
+-----
 
-Install [Cookiecutter](https://github.com/audreyr/cookiecutter):
+Install [Cookiecutter](https://github.com/audreyr/cookiecutter)::
 
     $ pip install cookiecutter
 
-Initialize the project with cookiecutter and answer some questions for the newly started project:
+Initialize the project with cookiecutter and answer some questions for the newly started project::
 
     $ cookiecutter https://github.com/hkage/cookiecutter-tornado
 
@@ -53,26 +62,57 @@ Initialize the project with cookiecutter and answer some questions for the newly
     6 - Not open source
     Choose from 1, 2, 3, 4, 5, 6 [1]: 1
 
-## Development
+Template development
+-----------------------
 
-### Testing
+If you decide to contribute to this cookiecutter template, feel free to fork it and make a pull request. To start with
+the development of this template, you need to install some Python requirements::
+
+    [sudo] pip install poetry
+
+After that simply let pipenv install all requirements::
+
+    $ poetry install
+
+To activate the virtual environment, simply call::
+
+    $ poetry shell
+
+Now you are able to run the tests for this template::
+
+    $ py.test
+
+In addition to that you can install tox to test the template against different Python versions::
+
+    $ [sudo] pip install tox
+
+And then run the tests with::
+
+    $ tox
+
+Tornado project development
+---------------------------
+
+Testing
+~~~~~~~
 
 All tests will be added to the `tests` directory, whether you are using pytest for testing or other tools like nose- or unittests.
 
 #### pytest
 
-With pytest you will be able to run the tests with:
+With pytest you will be able to run the tests with::
 
     $ py.test
 
-### Running the application
+Running the application
+~~~~~~~~~~~~~~~~~~~~~~~
 
-To start the final application, just run the following fabric command:
+To start the final application, just run the following fabric command::
 
     $ fab devserver
 
 This will tell Tornado to start the application with the default port 8888. If
-you want to use another port, just type:
+you want to use another port, just type::
 
     $ fab devserver:port=8000
 
@@ -81,8 +121,12 @@ commands.
 
 #### Vagrant
 
-To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and
-start the development server with the following command:
+To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and the
+Vagrant Alpine plugin::
+
+    $ vagrant plugin install vagrant-alpine
+
+After that you can start the development server with the following command::
 
     $ vagrant up
     $ fab vagrant devserver
@@ -92,8 +136,14 @@ You can now access your application via `http://localhost:8000`
 #### Docker
 
 Install docker and docker compose in the latest version. Then start the tornado
-project with docker-compose:
+project with docker-compose::
 
     $ docker-compose up
 
 You can now access your application via `http://localhost:8000`
+
+.. |license| image:: https://img.shields.io/badge/license-MIT-green.svg
+    :target: https://github.com/hkage/cookiecutter-tornado/blob/development/LICENSE.rst
+
+.. |build| image:: https://github.com/hkage/cookiecutter-tornado//workflows/Test/badge.svg
+    :target: https://github.com/hkage/cookiecutter-tornado//actions
