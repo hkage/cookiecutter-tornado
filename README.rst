@@ -98,7 +98,8 @@ Testing
 
 All tests will be added to the `tests` directory, whether you are using pytest for testing or other tools like nose- or unittests.
 
-#### pytest
+pytest
+******
 
 With pytest you will be able to run the tests with::
 
@@ -119,7 +120,8 @@ you want to use another port, just type::
 In addition to that, see the fabfile.py Script for other parameters and
 commands.
 
-#### Vagrant
+Vagrant
+*******
 
 To run the server within a Vagrant VM, you need to install Vagrant 1.7.x and the
 Vagrant Alpine plugin::
@@ -133,7 +135,8 @@ After that you can start the development server with the following command::
 
 You can now access your application via `http://localhost:8000`
 
-#### Docker
+Docker
+******
 
 Install docker and docker compose in the latest version. Then start the tornado
 project with docker-compose::
