@@ -40,19 +40,20 @@ Initialize the project with cookiecutter and answer some questions for the newly
 
     $ cookiecutter https://github.com/hkage/cookiecutter-tornado
 
-    project_name [project_name]: tornado_test
-    project_slug [tornado_test]:
-    author_name [Your name]: Your name
-    email [Your e-mail]: yourname@example.com
-    github_username [yourname]: yourusername
-    repo_name [tornado-project]:
-    description [A short description of the project.]: This is my Tornado project
-    version [0.1.0]:
-    use_pytest [y]: y
-    use_tox [y]: y
-    use_docker [y]: y
-    use_vagrant [y]: y
-    use_bumpversion [y]: y
+    project_name [project_name]: 
+    project_slug [project_name]: 
+    author_name [Your name]: 
+    email [Your e-mail]: 
+    github_username [yourname]: 
+    repo_name [tornado-project]: 
+    description [A short description of the project]: 
+    version [0.1.0]: 
+    use_pytest [y]: 
+    use_tox [y]: 
+    use_docker [y]: 
+    use_vagrant [y]: 
+    use_bumpversion [y]: 
+    max_line_length [120]: 
     Select open_source_license:
     1 - MIT license
     2 - BSD license
@@ -60,7 +61,7 @@ Initialize the project with cookiecutter and answer some questions for the newly
     4 - Apache Software License 2.0
     5 - GNU General Public License v3
     6 - Not open source
-    Choose from 1, 2, 3, 4, 5, 6 [1]: 1
+    Choose from 1, 2, 3, 4, 5, 6 [1]:
 
 Template development
 -----------------------
