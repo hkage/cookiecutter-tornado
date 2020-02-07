@@ -24,23 +24,6 @@ exec(open('{{ cookiecutter.project_slug }}/version.py').read())
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
 } %}
 
-classifiers = """
-'Development Status :: 2 - Alpha',
-'Intended Audience :: Developers',
-{%- if cookiecutter.open_source_license in license_classifiers %}
-'{{ license_classifiers[cookiecutter.open_source_license] }}',
-{%- endif %}
-'Natural Language :: English',
-'Programming Language :: Python :: 2',
-'Programming Language :: Python :: 2.7',
-'Programming Language :: Python :: 3',
-'Programming Language :: Python :: 3.2',
-'Programming Language :: Python :: 3.3',
-'Programming Language :: Python :: 3.4',
-'Programming Language :: Python :: 3.5',
-"""
-
-
 tests_require = [
     'coverage',
     'flake8',
@@ -63,12 +46,21 @@ setup(name='{{ cookiecutter.project_name }}',
       author='{{ cookiecutter.author_name }}',
       author_email='{{ cookiecutter.email }}',
       url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-      classifiers=[c.strip() for c in classifiers.splitlines()
-                   if c.strip() and not c.startswith('#')],
+      classifiers=[
+          'Development Status :: 2 - Alpha',
+          'Intended Audience :: Developers',
+          {%- if cookiecutter.open_source_license in license_classifiers %}
+          '{{ license_classifiers[cookiecutter.open_source_license] }}',
+          {%- endif %}
+          'Natural Language :: English',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+      ],
       include_package_data=True,
-      packages=[
-          '{{ cookiecutter.project_slug }}',
-          ],
+      packages=find_packages(include=['{{ cookiecutter.project_slug }}*']),
       test_suite='tests',
       setup_requires=['pytest-runner'],
       tests_require=tests_require)
