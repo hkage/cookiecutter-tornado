@@ -1,13 +1,17 @@
 # Local development dependencies go here
 -r base.txt
 
+{%- if cookiecutter.use_bumpversion == "Yes" %}
+bumpversion
+{%- endif %}
 coverage
 flake8
 mock
 pydocstyle
-pylint{% if cookiecutter.use_pytest == "Yes" -%}
+pylint
+{%- if cookiecutter.use_pytest == "Yes" %}
 pytest
+pytest-cov
 pytest-pep8
-pytest-cov{%- endif %}
-Sphinx{% if cookiecutter.use_bumpversion == "Yes" -%}
-bumpversion{%- endif %}
+{%- endif %}
+Sphinx

@@ -3,17 +3,17 @@
 
 # -*- coding: utf-8 -*-
 
-import os.path
+from __future__ import unicode_literals
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+import distutils
+import subprocess
+from os.path import dirname, join
+
+from setuptools import setup, find_packages
 {%- if cookiecutter.use_i18n == "Yes" %}
 from setuptools.command.sdist import sdist
 from wheel.bdist_wheel import bdist_wheel
 {%- endif %}
-
 
 def read(*args):
     return open(join(dirname(__file__), *args)).read()
@@ -43,6 +43,7 @@ class ToxTestCommand(distutils.cmd.Command):
         return subprocess.call(['tox'])
 
 {%- if cookiecutter.use_i18n == "Yes" %}
+
 
 def compile_translations(self):
     """

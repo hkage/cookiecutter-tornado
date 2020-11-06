@@ -72,6 +72,5 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_i18n }}' != 'Yes':
         shutil.rmtree('{{ cookiecutter.package_name }}/locale', ignore_errors=True)
 
-
     # Replace the cookie secret
     set_cookie_secret(PROJECT_DIRECTORY)

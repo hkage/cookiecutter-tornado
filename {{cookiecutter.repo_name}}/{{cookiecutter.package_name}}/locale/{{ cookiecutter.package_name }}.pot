@@ -1,0 +1,5 @@
+# Translations template for {{ cookiecutter.project_name }}.
+# Copyright (C) {% now 'local', '%Y' %}, {{ cookiecutter.author_name }}
+# This file is distributed under the same license as the {{ cookiecutter.repo_name }} project.
+# {{ cookiecutter.author_name }} {{ cookiecutter.email }}, {% now 'local', '%Y' %}.
+#
