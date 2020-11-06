@@ -15,9 +15,11 @@ from setuptools.command.sdist import sdist
 from wheel.bdist_wheel import bdist_wheel
 {%- endif %}
 
+
 def read(*args):
     return open(join(dirname(__file__), *args)).read()
 
+{%- if cookiecutter.use_tox == "Yes" %}
 
 class ToxTestCommand(distutils.cmd.Command):
     """Distutils command to run tests via tox with 'python setup.py test'.
@@ -41,6 +43,7 @@ class ToxTestCommand(distutils.cmd.Command):
     def run(self):
         self.announce("Running tests with 'tox'...", level=distutils.log.INFO)
         return subprocess.call(['tox'])
+{%- endif %}
 
 {%- if cookiecutter.use_i18n == "Yes" %}
 
@@ -118,7 +121,9 @@ setup(name='{{ cookiecutter.project_name }}',
       setup_requires=['pytest-runner'],
       tests_require=tests_require,
       cmdclass={
+        {%- if cookiecutter.use_tox == "Yes" %}
         'test': ToxTestCommand,
+        { % - endif %}
         {%- if cookiecutter.use_i18n == "Yes" %}
         'sdist': command_factory('SDistCommand', sdist, compile_translations),
         'bdist_wheel': command_factory('BDistWheelCommand', bdist_wheel, compile_translations),
