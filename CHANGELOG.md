@@ -3,9 +3,6 @@ Changelog
 
 Development
 ---
-
-0.3.0 (2020-01-28)
----
 * Bumped Tornado version to 6.0.3
 * Dropped Python 2.7 support
 * Use poetry for requirement management
