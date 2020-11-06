@@ -5,9 +5,9 @@ coverage
 flake8
 mock
 pydocstyle
-pylint{% if cookiecutter.use_pytest == 'y' -%}
+pylint{% if cookiecutter.use_pytest == "Yes" -%}
 pytest
 pytest-pep8
 pytest-cov{%- endif %}
-Sphinx{% if cookiecutter.use_bumpversion == 'y' -%}
+Sphinx{% if cookiecutter.use_bumpversion == "Yes" -%}
 bumpversion{%- endif %}

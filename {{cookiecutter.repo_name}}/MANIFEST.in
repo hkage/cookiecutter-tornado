@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+include CHANGELOG.md
+
+recursive-include {{ cookiecutter.package_name }} *.html *.js *.css *.png *.gif *.jpg *.jpeg *.svg *.po *.mo

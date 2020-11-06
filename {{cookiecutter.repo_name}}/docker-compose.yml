@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  {{ cookiecutter.project_slug }}:
+  {{ cookiecutter.package_name }}:
     build: .
     command: python /app/run.py
     ports:

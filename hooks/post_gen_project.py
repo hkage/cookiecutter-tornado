@@ -4,6 +4,7 @@
 
 import os
 import random
+import shutil
 import string
 
 
@@ -51,22 +52,26 @@ def set_cookie_secret(project_directory):
 
 
 if __name__ == '__main__':
-    if '{{ cookiecutter.use_docker }}'.lower() in ('n', 'no'):
+    if '{{ cookiecutter.use_docker }}' != 'Yes':
         for filename in DOCKER_FILES:
             remove_file(filename)
 
-    if '{{ cookiecutter.use_vagrant }}'.lower() in ('n', 'no'):
+    if '{{ cookiecutter.use_vagrant }}' != 'Yes':
         for filename in VAGRANT_FILES:
             remove_file(filename)
 
-    if '{{ cookiecutter.use_bumpversion }}'.lower() in ('n', 'no'):
+    if '{{ cookiecutter.use_bumpversion }}' != 'Yes':
         remove_file('.bumpversion.cfg')
 
-    if '{{ cookiecutter.use_tox }}'.lower() in ('n', 'no'):
+    if '{{ cookiecutter.use_tox }}' != 'Yes':
         remove_file('tox.ini')
 
-    if '{{ cookiecutter.use_pytest }}'.lower() in ('n', 'no'):
+    if '{{ cookiecutter.use_pytest }}' != 'Yes':
         remove_file('pytest.ini')
+
+    if '{{ cookiecutter.use_i18n }}' != 'Yes':
+        shutil.rmtree('{{ cookiecutter.package_name }}/locale', ignore_errors=True)
+
 
     # Replace the cookie secret
     set_cookie_secret(PROJECT_DIRECTORY)

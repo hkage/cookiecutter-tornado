@@ -3,11 +3,12 @@ Changelog
 
 Development
 ---
-* Bumped Tornado version to 6.0.3
+* Bumped Tornado version to 6
 * Dropped Python 2.7 support
 * Use poetry for requirement management
 * Added isort configuration
 * Added changelog and manifest file
+* Added internalization support
 
 0.2.5 (2019-06-06)
 ---
