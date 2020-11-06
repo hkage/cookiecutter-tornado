@@ -7,12 +7,8 @@ from cookiecutter.utils import rmtree
 
 
 YES_NO_CHOICES = [
-    ('y', True),
-    ('yes', True),
-    ('YES', True),
-    ('n', False),
-    ('no', False),
-    ('NO', False),
+    ('Yes', True),
+    ('No', False),
 ]
 
 
@@ -24,7 +20,7 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
     try:
         yield result
     finally:
-        rmtree(str(result.project), ignore_errors=True)
+        rmtree(str(result.project))
 
 
 def test_bake_project_with_defaults(cookies):
