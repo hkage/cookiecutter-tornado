@@ -18,11 +18,13 @@ YES_NO_CHOICES = [
 
 @contextmanager
 def bake_in_temp_dir(cookies, *args, **kwargs):
+    extra_context = kwargs.setdefault('extra_context', {})
+    extra_context.setdefault('project_name', 'myproject')
     result = cookies.bake(*args, **kwargs)
     try:
         yield result
     finally:
-        rmtree(str(result.project))
+        rmtree(str(result.project), ignore_errors=True)
 
 
 def test_bake_project_with_defaults(cookies):
@@ -77,3 +79,11 @@ def test_cookie_secret_has_been_generated(cookies):
         settings_file = result.project.join('settings.py')
         settings_lines = settings_file.readlines(cr=False)
         assert '!!CHANGEME!!' not in settings_lines
+
+
+def test_without_internationalization(cookies):
+    with bake_in_temp_dir(
+        cookies,
+        extra_context={'use_i18n': 'No'}
+    ) as result:
+        assert result.project.join('myproject/locale').isdir() is False
