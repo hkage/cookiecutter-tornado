@@ -28,6 +28,7 @@ Features
 * (Optional) Bumpversion_ for updating version information
 * (Optional) Docker support
 * (Optional) Vagrant support
+* (Optional) Internationalization support
 
 Usage
 -----
@@ -39,29 +40,6 @@ Install Cookiecutter_ ::
 Initialize the project with cookiecutter and answer some questions for the newly started project::
 
     $ cookiecutter https://github.com/hkage/cookiecutter-tornado
-
-    project_name [project_name]: 
-    project_slug [project_name]: 
-    author_name [Your name]: 
-    email [Your e-mail]: 
-    github_username [yourname]: 
-    repo_name [tornado-project]: 
-    description [A short description of the project]: 
-    version [0.1.0]: 
-    use_pytest [y]: 
-    use_tox [y]: 
-    use_docker [y]: 
-    use_vagrant [y]: 
-    use_bumpversion [y]: 
-    max_line_length [120]: 
-    Select open_source_license:
-    1 - MIT license
-    2 - BSD license
-    3 - ISC license
-    4 - Apache Software License 2.0
-    5 - GNU General Public License v3
-    6 - Not open source
-    Choose from 1, 2, 3, 4, 5, 6 [1]:
 
 Template development
 -----------------------
