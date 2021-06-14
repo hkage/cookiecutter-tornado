@@ -9,7 +9,7 @@ import distutils
 import subprocess
 from os.path import dirname, join
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 {%- if cookiecutter.use_i18n == "Yes" %}
 from setuptools.command.sdist import sdist
 from wheel.bdist_wheel import bdist_wheel
@@ -123,7 +123,7 @@ setup(name='{{ cookiecutter.project_name }}',
       cmdclass={
         {%- if cookiecutter.use_tox == "Yes" %}
         'test': ToxTestCommand,
-        { % - endif %}
+        {%- endif %}
         {%- if cookiecutter.use_i18n == "Yes" %}
         'sdist': command_factory('SDistCommand', sdist, compile_translations),
         'bdist_wheel': command_factory('BDistWheelCommand', bdist_wheel, compile_translations),
