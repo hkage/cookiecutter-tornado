@@ -2,4 +2,5 @@
 max-line-length = 120
 extend-exclude =
     get-poetry.py,
+    ./{{cookiecutter.repo_name}}/*,
     .venv/*,
