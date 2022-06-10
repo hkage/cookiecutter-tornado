@@ -1,4 +1,5 @@
-FROM python:3.7-alpine
+{%- set python_versions = cookiecutter.python_versions.split(",") -%}
+FROM python:{{ python_versions[-1] }}-alpine
 
 LABEL maintainer="{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"
 
