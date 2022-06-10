@@ -8,6 +8,7 @@ Development
 ---
 * Bumped Tornado version to 6
 * Dropped Python 2.7 support
+* Dropped Python 3.5 support
 * Use [poetry](https://python-poetry.org/) for requirement management
 * Added isort configuration
 * Added changelog and manifest file

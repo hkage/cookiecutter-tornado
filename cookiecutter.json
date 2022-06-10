@@ -7,7 +7,7 @@
   "github_username": "yourname",
   "description": "A short description of the project",
   "version": "0.1.0",
-  "python_versions": "3.5,3.6,3.7,3.8",
+  "python_versions": "3.6,3.7,3.8,3.9,3.10",
   "use_pytest": ["Yes", "No"],
   "use_tox": ["Yes", "No"],
   "use_docker": ["Yes", "No"],
