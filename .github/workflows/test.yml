@@ -1,0 +1,56 @@
+name: Test
+
+on: [push]
+
+jobs:
+  
+  testing:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: ['3.6', '3.7', '3.8', '3.9', '3.10']
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install poetry
+      run: |
+        curl -fsS -o get-poetry.py https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
+        python get-poetry.py -y
+
+    - name: Configure poetry
+      run: |
+        source $HOME/.poetry/env
+        poetry config virtualenvs.in-project true
+
+    - name: Set up cache
+      uses: actions/cache@v1
+      id: cache
+      with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
+
+    - name: Ensure cache is healthy
+      if: steps.cache.outputs.cache-hit == 'true'
+      run: poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
+
+    - name: Install dependencies
+      run: |
+        source $HOME/.poetry/env
+        poetry install
+    
+    - name: Test with pytest
+      run: |
+        source $HOME/.poetry/env
+        poetry run pytest -q tests
+    
+    - name: Lint with flake8
+      run: |
+        source $HOME/.poetry/env
+        poetry run flake8
