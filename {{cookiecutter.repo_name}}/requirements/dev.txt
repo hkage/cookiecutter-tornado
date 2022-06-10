@@ -1,9 +1,6 @@
 # Local development dependencies go here
 -r base.txt
 
-{%- if cookiecutter.use_bumpversion == "Yes" %}
-bumpversion
-{%- endif %}
 coverage
 flake8
 mock

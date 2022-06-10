@@ -25,10 +25,9 @@ Features
 * Basic HTML5 Boilerplate_
 * (Optional) pytest
 * (Optional) tox
-* (Optional) Bumpversion_ for updating version information
 * (Optional) Docker support
 * (Optional) Vagrant support
-* (Optional) Internationalization support
+* (Optional) Internationalization (i18n) support
 
 Usage
 -----
@@ -127,7 +126,6 @@ You can now access your application via `http://localhost:8000`
 .. _Tornado: http://www.tornadoweb.org/
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _Boilerplate: https://html5boilerplate.com/
-.. _Bumpversion: https://github.com/peritus/bumpversion
 
 .. |license| image:: https://img.shields.io/badge/license-MIT-green.svg
     :target: https://github.com/hkage/cookiecutter-tornado/blob/development/LICENSE.rst

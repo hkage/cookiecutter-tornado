@@ -12,7 +12,6 @@
   "use_tox": ["Yes", "No"],
   "use_docker": ["Yes", "No"],
   "use_vagrant": ["Yes", "No"],
-  "use_bumpversion": ["Yes", "No"],
   "use_i18n": ["Yes", "No"],
   "max_line_length": 120,
   "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]

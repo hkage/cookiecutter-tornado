@@ -49,13 +49,6 @@ def test_vagrant_support(cookies, with_vagrant_support, expected_result):
         assert ('Vagrantfile' in found_toplevel_files) == expected_result
 
 
-@pytest.mark.parametrize('with_bumpversion_support, expected_result', YES_NO_CHOICES)
-def test_bumpversion_support(cookies, with_bumpversion_support, expected_result):
-    with bake_in_temp_dir(cookies, extra_context={'use_bumpversion': with_bumpversion_support}) as result:
-        found_toplevel_files = [f.basename for f in result.project.listdir()]
-        assert ('.bumpversion.cfg' in found_toplevel_files) == expected_result
-
-
 @pytest.mark.parametrize('with_pytest_support, expected_result', YES_NO_CHOICES)
 def test_pytest_support(cookies, with_pytest_support, expected_result):
     with bake_in_temp_dir(cookies, extra_context={'use_pytest': with_pytest_support}) as result:

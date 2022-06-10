@@ -60,9 +60,6 @@ if __name__ == '__main__':
         for filename in VAGRANT_FILES:
             remove_file(filename)
 
-    if '{{ cookiecutter.use_bumpversion }}' != 'Yes':
-        remove_file('.bumpversion.cfg')
-
     if '{{ cookiecutter.use_tox }}' != 'Yes':
         remove_file('tox.ini')
 
