@@ -7,14 +7,12 @@ import random
 import shutil
 import string
 
-
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 DOCKER_FILES = ('Dockerfile', '.dockerignore', 'docker-compose.yml')
 VAGRANT_FILES = ('Vagrantfile', 'bootstrap.sh')
 
 
-def generate_random_string(length=25,
-                           allowed_chars=string.ascii_letters + string.digits):
+def generate_random_string(length=25, allowed_chars=string.ascii_letters + string.digits):
     """
     Generate a random string.
 
@@ -25,7 +23,7 @@ def generate_random_string(length=25,
     :returns: Random string
     :rtype: str
     """
-    return ''.join(random.choice(allowed_chars) for i in range(length))
+    return ''.join(map(lambda x: random.choice(allowed_chars), range(length)))
 
 
 def remove_file(filepath):
